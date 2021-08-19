@@ -1,0 +1,12 @@
+#spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    /* background: #1cc3ea8a; */
+    /* background: #1cc3eaf5; */
+    background: #fdc632;;
+}

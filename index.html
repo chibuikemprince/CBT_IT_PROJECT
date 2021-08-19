@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /> 
+    <title> HOME </title>
+    <!-- Bootstrap CSS -->
+   <script src="soesit_lib/js/soesit_jcore.js"> </script>
+<script src="soesit_lib/js/soesit_boot_core.js"> </script>
+<script src="js/api.js"> </script>
+<script src="js/reg_and_login.js"> </script>
+
+<link href="soesit_lib/css/soesit_boot_core.css" rel="stylesheet"/>
+<link href="css/soesit_spinner.css" rel="stylesheet"/>
+<link href="css/soesit_style_api.css" rel="stylesheet"/>
+<link href="css/basic.css" rel="stylesheet"/>
+ 
+   
+   <!-- main css -->
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+
+  <body>
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu"> 
+	  <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            
+			<a class="navbar-brand logo_h" href="index.html" style="margin-top:20px;font-size:30px;font-family:cursive;border-radius: 50%;
+    padding: 20px;
+    background-color: whitesmoke;
+    color: #002347;
+}" >
+			  <!-- <img src="img/logo.png" alt="" /> -->
+			CBTPREP
+			</a>
+			
+		  </div>
+		  
+        </nav>
+      </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================ Start Home Banner Area =================-->
+    <section class="home_banner_area">
+      <div class="banner_inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="banner_content text-center">
+                <p class="text-uppercase" style="color:red;text-shadow:2px 2px 2px black;">
+                  Best online interview practice portal
+                </p>
+                <h2 class="text-uppercase mt-4 mb-5" style="color:#fdc632;text-shadow:2px 2px 2px black;">
+                  One Step Ahead This Season
+				  
+                </h2>
+                <div>
+                   
+
+ <button type="button"  class="primary-btn2 mb-3 mb-sm-0"  onclick="open_reg(document.getElementById('model_body_div'))"> Register </button>
+   <button type="button" class="primary-btn ml-sm-3 ml-0"   onclick="open_login( document.getElementById('model_body_div')    )"  id="login_btn_user"> Login</button>
+  
+
+			   </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Home Banner Area =================-->
+
+   
+      
+   <button type="button" style="display:none;" id="modelshow" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" ></button>
+  
+<!-- Modal -->
+<div  style="top: 0px; background:#eee;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="false">
+  <div class="modal-dialog modal-lg" role="document" >
+    <div class="modal-content"   style="background:url(images/bg.jpg);background-size:cover;background-repeat:no-repeat;">
+	
+      <div class="modal-header" style="padding-bottom:2px;border:none;background-color:#ffffffb5;"">
+	   
+	  
+	    
+	   <button type="button" class="close" data-dismiss="modal" aria-label="Close" align="right" style="display:block;">
+	   <span aria-hidden="true" style="font-weight:900;text-shadow:2px 2px 2px black;" id="close_conversation_portal">&times;</span></button>
+      
+	 
+	  
+	  
+         
+	   
+	  
+	  </div>
+	  
+          
+      <div class="modal-body" style="    background-color:#ffffffdb;" >
+	   
+   
+	 	
+		
+		 <p class="mt-4 pr-lg-5" style="padding-button:40px;font-size:1.2em;background:#ffffffe6;display:block;padding: 100px;" id="model_body_div" > 
+		    
+					 
+		 
+		 
+					</p>
+		
+		 <div   style="padding:10px; background:#ffffffe6;display:none; " id="img_model" > 
+		 		
+					 	 
+ 
+					
+					
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--  </div> -->
+      </div>
+	  <p id="top_textarea_error_p" style="color:red;margin-right:60px;margin-left:60px;"></p>
+	 
+	  <div class="modal-footer" id="modelfooter">
+	  
+	   
+		<button type="button" class="btn btn-default" id="send_chat_btn" onclick="document.getElementById('modelshow').click();" >Close</button> 
+ <!--      
+<a href="#gallery_model_top" class="back-to-top" onclick="document.getElementById('gallery_model_top').scrollIntoView();" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+-->
+
+	       </div>
+    </div>
+  </div>
+
+ 
+	
+
+<div id="spinner" >
+
+
+<div class="sk-three-bounce"  style=" ">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+      </div>
+</div>
+
+
+
+
+<script>
+	// spinner
+  $(window).on('load', function () {
+
+ hide_elements("spinner");
+//show_elements("spinner","block");
+recover_onload();
+});
+
+
+</script>
+
+
+  </body>
+</html>

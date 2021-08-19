@@ -1,0 +1,471 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Admin Page</title>
+       
+
+<script src="soesit_lib/js/soesit_jcore.js"> </script>
+<script src="soesit_lib/js/soesit_boot_core.js"> </script>
+<script src="js/api.js"> </script>
+<script src="js/admin_post.js"> </script>
+<script src="js/reg_and_login.js"> </script>
+
+<link href="soesit_lib/css/soesit_boot_core.css" rel="stylesheet"/>
+<link href="css/soesit_spinner.css" rel="stylesheet"/>
+<link href="css/soesit_style_api.css" rel="stylesheet"/>
+<link href="css/basic.css" rel="stylesheet"/>
+ 
+
+
+	   <link type="text/css" href="css/exam_page_theme.css" rel="stylesheet">
+             
+			 
+			 <style>
+			 /* report  */
+
+
+
+ 
+ 
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  margin-top: -70px;
+}
+
+.table-title h3 {
+   color: black;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+      margin-left:0px;
+}
+
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+ 
+
+
+
+			 /* report  */
+			 
+			 
+			 
+			 
+			 
+			 ul,ol{
+			 padding:0px;
+			 margin:0 0 10px 25px;
+			width:300px;
+			 }
+			 .widget-menu>li+li {
+    border-top: 1px solid #555;
+    
+}
+
+
+.all_question_list > li{
+	margin-top:16px;
+	
+}
+
+
+.all_question ul{
+	
+	margin-left:30%;
+	
+}
+
+
+
+
+
+a.list-a-admin{
+padding:30px;
+    font-size: 1.3em;
+    font-family: cursive;
+}
+
+.item{border: 1px solid black;
+    outline: 1px dotted black;
+	margin-left:170px;
+	}
+.testi_item{
+padding:20px;
+}
+
+li{
+
+list-style:none;}
+
+
+.notanswered{
+	text-align:center;
+	background-color:#ccc;
+	box-shadow:1px 1px 1px black;
+	color:black;
+	margin-right:2px;
+	
+}
+	
+.answered{
+	margin-right:2px;
+	text-align:center;
+	background-color:#248aaf;
+	box-shadow:1px 1px 1px black;
+	color:white;
+	
+}
+
+
+.each_user_div{    border: 1px dotted black;
+    box-shadow: 2px 2px 2px black;
+    padding: 12px;
+    background-color: snow;
+	margin-bottom:10px;
+	}
+ 
+ 
+  
+			 </style>
+    </head>
+    
+	
+	
+	<body> 
+
+	
+	  
+<div id="spinner" style=" ">
+
+<div class="sk-three-bounce" style=" ">
+<h2 id="ready_question_counter" style="font-family:cursive;"></h2>
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+      </div>
+</div>
+
+	
+	<div class="wrapper">
+            <div class="container">
+                <div class="row">
+				
+				
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <ul class="widget widget-menu unstyled">
+                                <li class="active">
+								
+								<a href="#" class="list-a-admin "   success="model_body_div" error="modelError_top" url="users_info"    onclick="admin_request(this,'action=userinfo',event)" > View Users 
+  
+	
+                                </a>
+								
+								
+								</li>
+                                <li><a  href="#" class="list-a-admin"    success="model_body_div" error="modelError_top"    onclick="admin_get_form(this,'action=start_edith_question_form',event)"  >Edit or Delete Questions 
+   
+									
+									</a>
+									</li>
+									
+									<li>
+								<a href="#" class="list-a-admin"    success="model_body_div" error="modelError_top"    onclick="admin_get_form(this,'action=upload_questions',event)"  > Upload Questions 
+   
+									</a></li>
+																	
+								 
+						<li>
+								<a href="#" class="list-a-admin"     success="model_body_div" error="modelError_top"    onclick="admin_get_form(this,'action=admin_add_category',event)" > Add category 
+	
+	
+									</a></li>
+											<li>
+								<a href="#" class="list-a-admin"  url="get_scores" success="model_body_div" error="modelError_top"   onclick="admin_request(this,'action=getScores',event)" > View Report
+   
+									</a></li>
+									
+											<!-- <li>
+								<a href="#" class="list-a-admin"  success="model_body_div" error="modelError_top" url="get_scores"     onclick="get_details(this,'action=getScores',event)"  > Scores  
+   
+									</a></li>
+									 -->
+									
+											<li>
+								<a href="#" class="list-a-admin"    success="model_body_div" error="modelError_top"   onclick="logout('admin')" > Log out 
+ 
+ 
+									</a></li>
+																	
+								 
+									
+									
+									
+									
+									
+									
+									
+                            </ul>
+                            <!--/.widget-nav-->
+                            
+                             
+						</div>
+                        <!--/.sidebar-->
+                    </div>
+                    <!--/.span3-->
+                    
+					<!-- s -->
+					<div class="col-md-8">
+					
+				   <section class="">
+        	<div class="container">
+        		<div class="testi_slider owl-carousel exam_question_slide" id="all_ques_body">
+        			 
+				<div class="item exam_question" style="display: block;margin-top:70px;">
+				<div class="testi_item">
+	 
+	<h3 style="word-break: break-all;" align='center'>  WELCOME TO ADMIN CBTPREP DASHBORD </h3>
+	 
+        		</div> 
+				
+				</div>
+				 
+				
+				
+			  
+				
+								
+				
+				
+				
+				</div>
+        	</div>
+			
+        </section>
+     
+					
+					 
+					
+					</div>
+					<!-- span 9 -->
+                </div>
+            </div>
+            <!--/.container-->
+        </div>
+        
+		
+		
+		
+		<button type="button" style="display:none;" id="modelshow" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>
+  
+<!-- Modal -->
+<div style="top: 0px; background:#eee;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="background:url(images/bg.jpg);background-size:cover;background-repeat:no-repeat;">
+	
+      <div class="modal-header" style="padding-bottom:2px;border:none;background-color:#ffffffb5;" "="">
+	   
+	  
+	    
+	   <button type="button" class="close" data-dismiss="modal" aria-label="Close" align="right" style="display:block;">
+	   <span aria-hidden="true" style="font-weight:900;text-shadow:2px 2px 2px black;" id="close_conversation_portal">×</span></button>
+      
+	 
+	  
+	  
+         
+	   
+	  
+	  </div>
+	  
+          
+      <div class="modal-body" style="    background-color:#ffffffdb;">
+	   
+   <h5 align="center" style="text-align:center;" id="modelError_top"> </h5>
+	 	
+		
+		 <p class="mt-4 pr-lg-5" style="padding-button:40px;font-size:1.2em;background:#ffffffe6;display:block;padding: 100px;" id="model_body_div"> 
+		    
+					 
+		 
+		 
+					</p>
+		
+		 <div style="padding:10px; background:#ffffffe6;display:none; " id="img_model"> 
+		 		
+					 	 
+ 
+					
+					
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--  </div> -->
+      </div>
+	  <p id="top_textarea_error_p" style="color:red;margin-right:60px;margin-left:60px;"></p>
+	 
+	  <div class="modal-footer" id="modelfooter">
+	  
+	   
+		<button type="button" class="btn btn-default" id="send_chat_btn" onclick="document.getElementById('modelshow').click();">Close</button> 
+ <!--      
+<a href="#gallery_model_top" class="back-to-top" onclick="document.getElementById('gallery_model_top').scrollIntoView();" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+-->
+
+	       </div>
+    </div>
+  </div>
+
+ 
+
+<button type="button" style="display:none" id="hidden_submit" success="model_body_div" error="modelError_top" url="examiner" class="btn btn-primary btn-lg" onclick="get_details(this,'action='+JSON.stringify(answers_store),event)"></button>
+
+
+<script>
+	// spinner
+  $(window).on('load', function () {
+ 
+hide_elements("spinner");
+  
+});
+
+
+</script>
+
+<script src="js/exam_page.js"> </script>
+    
+</div></body>
+	
+	
+	</html>
+	
